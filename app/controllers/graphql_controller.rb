@@ -6,7 +6,7 @@ class GraphqlController < ApplicationController
     context = {
       # Query context goes here, for example:
       # current_user: current_user,
-      post: Post.last
+      post: Post.first
     }
     result = WebTechnologySeriesTask1Schema.execute(query, variables: variables, context: context, operation_name: operation_name)
     render json: result
