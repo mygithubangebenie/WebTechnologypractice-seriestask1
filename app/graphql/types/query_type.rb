@@ -11,9 +11,9 @@ Types::QueryType = GraphQL::ObjectType.define do
     }
   end
 
-  field :posts, !Types::PostsTypes do
-    resolve ->(_obj, _args,ctx){
-      ctx[:posts]
+  field :post, !Types::PostType do
+    resolve ->(_obj, _args, ctx){
+      ctx[:post]
     }
 end
 
